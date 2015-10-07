@@ -49,6 +49,9 @@ typedef enum {
 
 @end
 
+@implementation VKAVPlayer
+@end
+
 
 @implementation VKVideoPlayer
 

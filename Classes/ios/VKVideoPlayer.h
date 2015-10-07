@@ -103,6 +103,8 @@ typedef enum {
 - (CMTime)currentCMTime;
 @end
 
+@interface VKAVPlayer : AVPlayer
+@end
 
 @interface VKVideoPlayer : NSObject<
 VKVideoPlayerViewDelegate
@@ -111,7 +113,7 @@ VKVideoPlayerViewDelegate
 @property (nonatomic, strong) id<VKVideoPlayerTrackProtocol> track;
 @property (nonatomic, weak) id<VKVideoPlayerDelegate> delegate;
 @property (nonatomic, assign) VKVideoPlayerState state;
-@property (nonatomic, strong) AVPlayer *avPlayer;
+@property (nonatomic, strong) VKAVPlayer *avPlayer;
 @property (nonatomic, strong) AVPlayerItem* playerItem;
 @property (nonatomic, assign) BOOL playerControlsEnabled;
 @property (nonatomic, strong) id<VKPlayer> player;
