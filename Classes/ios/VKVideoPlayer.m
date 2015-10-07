@@ -501,7 +501,7 @@ typedef enum {
   
 }
 
-- (void)setAvPlayer:(AVPlayer *)avPlayer {
+- (void)setAvPlayer:(VKAVPlayer *)avPlayer {
   self.timeObserver = nil;
   self.captionTopTimer = nil;
   self.captionBottomTimer = nil;
@@ -525,8 +525,8 @@ typedef enum {
   }
 }
 
-- (AVPlayer*)playerWithPlayerItem:(AVPlayerItem*)playerItem {
-  AVPlayer* player = [AVPlayer playerWithPlayerItem:playerItem];
+- (VKAVPlayer*)playerWithPlayerItem:(AVPlayerItem*)playerItem {
+  VKAVPlayer* player = [VKAVPlayer playerWithPlayerItem:playerItem];
   if ([player respondsToSelector:@selector(setAllowsAirPlayVideo:)]) player.allowsAirPlayVideo = NO;
   if ([player respondsToSelector:@selector(setAllowsExternalPlayback:)]) player.allowsExternalPlayback = NO;
   return player;
